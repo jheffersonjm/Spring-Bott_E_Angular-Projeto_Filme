@@ -191,52 +191,52 @@ Front-And/
 ## 7. Fluxo de Dados
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                   ANGULAR FRONTEND                  │
+┌────────────────────────────────────────────────────┐
+│                   ANGULAR FRONTEND                 │
 │  ┌─────────────────────────────────────────────┐   │
 │  │         Componentes (Tela)                  │   │
 │  │  • tela-login • home • conteudo • genero    │   │
 │  │  • nota • perfil • configuracao             │   │
 │  └─────────────┬───────────────────────────────┘   │
-│                │                                     │
+│                │                                   │
 │  ┌─────────────▼───────────────────────────────┐   │
 │  │         Serviços                            │   │
 │  │  • conteudo-service • genero.ts             │   │
 │  │  • nota-service • home-service              │   │
 │  │  • tela-login-service                       │   │
 │  └─────────────┬───────────────────────────────┘   │
-│                │                                     │
+│                │                                   │
 │  ┌─────────────▼───────────────────────────────┐   │
 │  │         Guards                              │   │
 │  │  • auth.guard.ts                            │   │
 │  └─────────────┬───────────────────────────────┘   │
-└─────────────────┼────────────────────────────────────┘
-                  │ HTTP Requests (REST API)
-┌─────────────────▼────────────────────────────────────┐
-│                SPRING BOOT BACKEND                   │
+└────────────────┼───────────────────────────────────┘
+                 │ HTTP Requests (REST API)
+┌────────────────▼────────────────────────────────────┐
+│                SPRING BOOT BACKEND                  │
 │  ┌──────────────────────────────────────────────┐   │
 │  │         REST Controllers                     │   │
 │  │  • FilmeController • GeneroController        │   │
 │  │  • NotaController • UsuarioController        │   │
 │  └──────────────────┬───────────────────────────┘   │
-│                     │                                 │
+│                     │                               │
 │  ┌──────────────────▼───────────────────────────┐   │
-│  │         Services / Lógica de Negócio        │   │
-│  │  • FilmeService • GeneroService             │   │
-│  │  • NotaService • UsuarioService             │   │
+│  │         Services / Lógica de Negócio        │    │
+│  │  • FilmeService • GeneroService             │    │
+│  │  • NotaService • UsuarioService             │    │
 │  └──────────────────┬───────────────────────────┘   │
-│                     │                                 │
+│                     │                               │
 │  ┌──────────────────▼───────────────────────────┐   │
-│  │         Repositories (JPA)                  │   │
-│  │  • FilmeRepository • GeneroRepository       │   │
-│  │  • NotaRepository • UsuarioRepository       │   │
+│  │         Repositories (JPA)                  │    │
+│  │  • FilmeRepository • GeneroRepository       │    │
+│  │  • NotaRepository • UsuarioRepository       │    │
 │  └──────────────────┬───────────────────────────┘   │
-└─────────────────────┼────────────────────────────────┘
+└─────────────────────┼───────────────────────────────┘
                       │
 ┌─────────────────────▼────────────────────────────────┐
 │              DATABASE (PostgreSQL)                   │
-│  • Filmes • Generos • Notas • Usuarios              │
-│  • Associações • Relacionamentos                    │
+│  • Filmes • Generos • Notas • Usuarios               │
+│  • Associações • Relacionamentos                     │
 └──────────────────────────────────────────────────────┘
 ```
 
