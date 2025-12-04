@@ -1,0 +1,126 @@
+<div class="home-container">
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span>Criar Conteúdo</span>
+      </div>
+      <button class="btn-logout" type="button" (click)="voltarHome()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Voltar
+      </button>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div class="welcome-card">
+      <div class="user-avatar">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+      </div>
+      
+      <h1>Novo Conteúdo</h1>
+      
+      <form #conteudoForm="ngForm" (ngSubmit)="criarConteudo()" class="content-form">
+        <div class="form-group">
+          <label for="title">Título</label>
+          <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            [(ngModel)]="title" 
+            required
+            class="form-input"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea 
+            id="descricao" 
+            name="descricao" 
+            [(ngModel)]="descricao" 
+            required
+            class="form-input"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="anoLancamento">Ano de Lançamento</label>
+          <input 
+            type="number" 
+            id="anoLancamento" 
+            name="anoLancamento" 
+            [(ngModel)]="anoLancamento" 
+            required
+            class="form-input"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="imagemURL">URL da Imagem</label>
+          <input 
+            type="text" 
+            id="imagemURL" 
+            name="imagemURL" 
+            [(ngModel)]="imagemURL" 
+            required
+            class="form-input"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="tipoconteudo">Tipo de Conteúdo</label>
+          <input 
+            type="text" 
+            id="tipoconteudo" 
+            name="tipoconteudo" 
+            [(ngModel)]="tipoconteudo" 
+            required
+            class="form-input"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="genero">Gênero</label>
+          <select 
+            id="genero" 
+            name="genero" 
+            [(ngModel)]="generoSelecionado" 
+            required
+            class="form-input"
+          >
+            <option [ngValue]="null" disabled>Selecione um gênero</option>
+            @for (genero of generos; track genero.id) {
+              <option [ngValue]="genero">{{ genero.nome }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn-primary" [disabled]="!conteudoForm.valid">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+              <polyline points="17 21 17 13 7 13 7 21"></polyline>
+              <polyline points="7 3 7 8 15 8"></polyline>
+            </svg>
+            Salvar
+          </button>
+          <button type="button" class="btn-secondary" (click)="voltarHome()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
