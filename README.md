@@ -221,15 +221,15 @@ Front-And/
 │  └──────────────────┬───────────────────────────┘   │
 │                     │                               │
 │  ┌──────────────────▼───────────────────────────┐   │
-│  │         Services / Lógica de Negócio        │    │
-│  │  • FilmeService • GeneroService             │    │
-│  │  • NotaService • UsuarioService             │    │
+│  │         Services / Lógica de Negócio         │   │
+│  │  • FilmeService • GeneroService              │   │
+│  │  • NotaService • UsuarioService              │   │
 │  └──────────────────┬───────────────────────────┘   │
 │                     │                               │
 │  ┌──────────────────▼───────────────────────────┐   │
-│  │         Repositories (JPA)                  │    │
-│  │  • FilmeRepository • GeneroRepository       │    │
-│  │  • NotaRepository • UsuarioRepository       │    │
+│  │         Repositories (JPA)                   │   │
+│  │  • FilmeRepository • GeneroRepository        │   │
+│  │  • NotaRepository • UsuarioRepository        │   │
 │  └──────────────────┬───────────────────────────┘   │
 └─────────────────────┼───────────────────────────────┘
                       │
