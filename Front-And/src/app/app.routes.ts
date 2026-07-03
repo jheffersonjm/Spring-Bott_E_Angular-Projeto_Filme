@@ -11,36 +11,36 @@ import { CriarConteudo } from './Tela/Coteudo/criar-conteudo/criar-conteudo';
 import { CriarGenero } from './Tela/Genero/criar-genero/criar-genero';
 
 export const routes: Routes = [
-    { 
-        path: '', 
-        component: Home
-    }, 
-    { 
-        path: 'TelaLogin', 
+    {
+        path: '',
         component: TelaLogin
     },
-    { 
-        path: 'home', 
+    {
+        path: 'TelaLogin',
+        component: TelaLogin
+    },
+    {
+        path: 'home',
         component: Home,
         canActivate: [authGuard]
     },
     {
         path: 'Perfil',
         component: Perfil,
-    }, 
+    },
     {
         path: 'Configuracao',
         component: Configuracao,
-    }, 
-    { 
-        path: 'conteudo', 
+    },
+    {
+        path: 'conteudo',
         component:Conteudo,
-    }, 
-    { 
-        path: 'Nota', 
-        component: Nota, 
-    }, 
-    { 
+    },
+    {
+        path: 'Nota',
+        component: Nota,
+    },
+    {
         path: 'Genero',
         component: Genero,
     },
